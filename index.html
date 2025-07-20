@@ -1,0 +1,686 @@
+<title>Science-Based Workout Plan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scroll-progress"></div>
+
+<div class="language-toggle">
+  <span class="earth-emoji">&#127757;</span>
+  <select id="languageSelect">
+    <option value="en">English</option>
+    <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</option>
+    <option value="nl">Nederlands</option>
+  </select>
+</div>
+
+<div class="cover">
+  <svg class="logo" style="width: 200px; height: 200px;" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Dumbbell -->
+    <g transform="translate(100, 150)" fill="#60a5fa">
+      <rect x="0" y="40" width="200" height="20" rx="5"/>
+      <rect x="-30" y="20" width="40" height="60" rx="5"/>
+      <rect x="-60" y="30" width="40" height="40" rx="5"/>
+      <rect x="190" y="20" width="40" height="60" rx="5"/>
+      <rect x="220" y="30" width="40" height="40" rx="5"/>
+    </g>
+    
+    <text x="200" y="280" text-anchor="middle" fill="#60a5fa" style="font-size: 24px; font-weight: bold;">
+      DON&apos;T BE FAT FUCK
+    </text>
+    <text x="200" y="320" text-anchor="middle" fill="#60a5fa" style="font-size: 40px; font-weight: bold;">
+      BE FIT FUCK
+    </text>
+  </svg>
+
+  <h1 class="editable-content" data-translate="title">Amin Shan Science-Based Workout Plan</h1>
+  <h2 class="editable-content" data-translate="subtitle" contenteditable="true">A hypertrophy and strength-focused program inspired by Jeff Nippard&apos;s evidence-based methods</h2>
+</div>
+
+<div class="day-jumper">
+  <div class="jumper-container">
+    <div class="jump-btn">
+      <span class="editable-content" data-translate="jumpDay1" contenteditable="true">Day 1</span>
+      <span class="editable-content" data-translate="jumpPush1" contenteditable="true">Push</span>
+    </div>
+    <div class="jump-btn">
+      <span class="editable-content" data-translate="jumpDay2" contenteditable="true">Day 2</span>
+      <span class="editable-content" data-translate="jumpPull1" contenteditable="true">Pull</span>
+    </div>
+    <div class="jump-btn">
+      <span class="editable-content" data-translate="jumpDay3" contenteditable="true">Day 3</span>
+      <span class="editable-content" data-translate="jumpLegs1" contenteditable="true">Legs</span>
+    </div>
+    <div class="jump-btn">
+      <span class="editable-content" data-translate="jumpDay4" contenteditable="true">Day 4</span>
+      <span class="editable-content" data-translate="jumpRest" contenteditable="true">Rest</span>
+    </div>
+    <div class="jump-btn">
+      <span class="editable-content" data-translate="jumpDay5" contenteditable="true">Day 5</span>
+      <span class="editable-content" data-translate="jumpPush2" contenteditable="true">Push</span>
+    </div>
+    <div class="jump-btn">
+      <span class="editable-content" data-translate="jumpDay6" contenteditable="true">Day 6</span>
+      <span class="editable-content" data-translate="jumpPull2" contenteditable="true">Pull</span>
+    </div>
+    <div class="jump-btn">
+      <span class="editable-content" data-translate="jumpDay7" contenteditable="true">Day 7</span>
+      <span class="editable-content" data-translate="jumpLegs2" contenteditable="true">Legs</span>
+    </div>
+  </div>
+</div>
+
+<div class="weekly-overview">
+  <h2 class="editable-content" data-translate="weeklyOverview" contenteditable="true">Weekly Overview</h2>
+  <div class="overview-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+    <div class="info-card">
+      <h3 data-translate="frequency">Frequency</h3>
+      <p class="editable-content" contenteditable="true">5&#x2013;6 days per week</p>
+    </div>
+    <div class="info-card">
+      <h3 data-translate="split">Split</h3>
+      <p class="editable-content" contenteditable="true">Push/Pull/Legs (PPL) with variations for volume and intensity</p>
+    </div>
+    <div class="info-card">
+      <h3 data-translate="restDays">Rest Days</h3>
+      <p class="editable-content" contenteditable="true">1&#x2013;2 (adjust based on recovery)</p>
+    </div>
+  </div>
+</div>
+
+<div class="schedule-grid">
+  <div class="workout-card" id="workout-0">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+      <h3 class="editable-content" data-translate="day1" contenteditable="true">Day 1 - Push (Chest, Shoulders, Triceps)</h3>
+      <button class="delete-card-btn" onclick="deleteWorkoutCard(this)" style="background: #ef4444; color: white; border: none; padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer;">Delete Card</button>
+    </div>
+    <table class="workout-table">
+      <thead>
+        <tr>
+          <th class="editable-content" contenteditable="true">Exercise</th>
+          <th class="editable-content" contenteditable="true">Sets</th>
+          <th class="editable-content" contenteditable="true">Reps</th>
+          <th class="editable-content" contenteditable="true">Rest</th>
+          <th class="editable-content" contenteditable="true">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Flat Barbell Bench Press" data-original="Flat Barbell Bench Press" value="Flat Barbell Bench Press">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="4"></td>
+          <td><input type="text" class="editable" value="6-8"></td>
+          <td><input type="text" class="editable" value="2-3 min"></td>
+          <td><input type="text" class="editable" value="Heavy, focus on form"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Incline Dumbbell Press" data-original="Incline Dumbbell Press" value="Incline Dumbbell Press">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="8-10"></td>
+          <td><input type="text" class="editable" value="2 min"></td>
+          <td><input type="text" class="editable" value="Control descent"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Seated Overhead Dumbbell Press" data-original="Seated Overhead Dumbbell Press" value="Seated Overhead Dumbbell Press">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="8-12"></td>
+          <td><input type="text" class="editable" value="2 min"></td>
+          <td><input type="text" class="editable" value="Full range of motion"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Lateral Raises" data-original="Lateral Raises" value="Lateral Raises">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="12-15"></td>
+          <td><input type="text" class="editable" value="90 sec"></td>
+          <td><input type="text" class="editable" value="Use light weight for strict form"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Cable Tricep Pushdowns" data-original="Cable Tricep Pushdowns" value="Cable Tricep Pushdowns">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="10-12"></td>
+          <td><input type="text" class="editable" value="90 sec"></td>
+          <td><input type="text" class="editable" value="Keep elbows tight"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Overhead Tricep Extensions" data-original="Overhead Tricep Extensions" value="Overhead Tricep Extensions">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="12-15"></td>
+          <td><input type="text" class="editable" value="90 sec"></td>
+          <td><input type="text" class="editable" value="Cable or Dumbbell variation"></td>
+        </tr>
+      </tbody>
+      <tr class="add-exercise-row">
+        <td colspan="5" style="text-align: center; padding: 1rem;">
+          <button onclick="window.addExerciseRow(this)" style="background: var(--primary); 
+                         color: var(--background); 
+                         padding: 0.5rem 1rem; 
+                         border-radius: 0.5rem; 
+                         border: none; 
+                         cursor: pointer; 
+                         font-weight: bold;">
+            + Add Exercise
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="workout-card" id="workout-1">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+      <h3 class="editable-content" data-translate="day2" contenteditable="true">Day 2 - Pull (Back, Rear Delts, Biceps)</h3>
+      <button class="delete-card-btn" onclick="deleteWorkoutCard(this)" style="background: #ef4444; color: white; border: none; padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer;">Delete Card</button>
+    </div>
+    <table class="workout-table">
+      <thead>
+        <tr>
+          <th class="editable-content" contenteditable="true">Exercise</th>
+          <th class="editable-content" contenteditable="true">Sets</th>
+          <th class="editable-content" contenteditable="true">Reps</th>
+          <th class="editable-content" contenteditable="true">Rest</th>
+          <th class="editable-content" contenteditable="true">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Pull-Ups/Lat Pulldown" data-original="Pull-Ups/Lat Pulldown" value="Pull-Ups/Lat Pulldown">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="4"></td>
+          <td><input type="text" class="editable" value="6-8"></td>
+          <td><input type="text" class="editable" value="2 min"></td>
+          <td><input type="text" class="editable" value="Weighted if possible"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Barbell Row" data-original="Barbell Row" value="Barbell Row">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="4"></td>
+          <td><input type="text" class="editable" value="6-8"></td>
+          <td><input type="text" class="editable" value="2 min"></td>
+          <td><input type="text" class="editable" value="Pendlay row variation"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Chest-Supported Dumbbell Row" data-original="Chest-Supported Dumbbell Row" value="Chest-Supported Dumbbell Row">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="10-12"></td>
+          <td><input type="text" class="editable" value="90 sec"></td>
+          <td><input type="text" class="editable" value="Focus on scapular retraction"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Face Pulls" data-original="Face Pulls" value="Face Pulls">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="12-15"></td>
+          <td><input type="text" class="editable" value="90 sec"></td>
+          <td><input type="text" class="editable" value="Rear delt focus"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Barbell/Dumbbell Bicep Curls" data-original="Barbell/Dumbbell Bicep Curls" value="Barbell/Dumbbell Bicep Curls">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="10-12"></td>
+          <td><input type="text" class="editable" value="90 sec"></td>
+          <td><input type="text" class="editable" value="Strict form"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Hammer Curls" data-original="Hammer Curls" value="Hammer Curls">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="12-15"></td>
+          <td><input type="text" class="editable" value="90 sec"></td>
+          <td><input type="text" class="editable" value="Control the negative"></td>
+        </tr>
+      </tbody>
+      <tr class="add-exercise-row">
+        <td colspan="5" style="text-align: center; padding: 1rem;">
+          <button onclick="window.addExerciseRow(this)" style="background: var(--primary); 
+                         color: var(--background); 
+                         padding: 0.5rem 1rem; 
+                         border-radius: 0.5rem; 
+                         border: none; 
+                         cursor: pointer; 
+                         font-weight: bold;">
+            + Add Exercise
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="workout-card" id="workout-2">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+      <h3 class="editable-content" data-translate="day3" contenteditable="true">Day 3 - Legs (Quads, Hamstrings, Glutes)</h3>
+      <button class="delete-card-btn" onclick="deleteWorkoutCard(this)" style="background: #ef4444; color: white; border: none; padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer;">Delete Card</button>
+    </div>
+    <table class="workout-table">
+      <thead>
+        <tr>
+          <th class="editable-content" contenteditable="true">Exercise</th>
+          <th class="editable-content" contenteditable="true">Sets</th>
+          <th class="editable-content" contenteditable="true">Reps</th>
+          <th class="editable-content" contenteditable="true">Rest</th>
+          <th class="editable-content" contenteditable="true">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Back Squat" data-original="Back Squat" value="Back Squat">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="4"></td>
+          <td><input type="text" class="editable" value="6-8"></td>
+          <td><input type="text" class="editable" value="3 min"></td>
+          <td><input type="text" class="editable" value="Focus on depth"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Romanian Deadlift" data-original="Romanian Deadlift" value="Romanian Deadlift">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="8-10"></td>
+          <td><input type="text" class="editable" value="2 min"></td>
+          <td><input type="text" class="editable" value="Feel the hamstrings"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Walking Lunges" data-original="Walking Lunges" value="Walking Lunges">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="10/leg"></td>
+          <td><input type="text" class="editable" value="2 min"></td>
+          <td><input type="text" class="editable" value="Weight optional"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Leg Press" data-original="Leg Press" value="Leg Press">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="10-12"></td>
+          <td><input type="text" class="editable" value="2 min"></td>
+          <td><input type="text" class="editable" value="Control eccentric"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Hamstring Curls" data-original="Hamstring Curls" value="Hamstring Curls">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="12-15"></td>
+          <td><input type="text" class="editable" value="90 sec"></td>
+          <td><input type="text" class="editable" value="Full range of motion"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Calf Raises" data-original="Calf Raises" value="Calf Raises">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="4"></td>
+          <td><input type="text" class="editable" value="15-20"></td>
+          <td><input type="text" class="editable" value="60 sec"></td>
+          <td><input type="text" class="editable" value="Pause at top"></td>
+        </tr>
+      </tbody>
+      <tr class="add-exercise-row">
+        <td colspan="5" style="text-align: center; padding: 1rem;">
+          <button onclick="window.addExerciseRow(this)" style="background: var(--primary); 
+                         color: var(--background); 
+                         padding: 0.5rem 1rem; 
+                         border-radius: 0.5rem; 
+                         border: none; 
+                         cursor: pointer; 
+                         font-weight: bold;">
+            + Add Exercise
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="workout-card" id="workout-3">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+      <h3 class="editable-content" data-translate="day4" contenteditable="true">Day 4 - Rest/Active Recovery</h3>
+      <button class="delete-card-btn" onclick="deleteWorkoutCard(this)" style="background: #ef4444; color: white; border: none; padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer;">Delete Card</button>
+    </div>
+    <div class="info-card" style="margin-top: 1rem">
+      <h4>Suggested Activities:</h4>
+      <ul>
+        <li>Light stretching</li>
+        <li>Yoga</li>
+        <li>Mobility work</li>
+        <li>Light cardio (walking, swimming)</li>
+      </ul>
+      <p><em>Focus on recovery and flexibility</em></p>
+    </div>
+  </div>
+
+  <div class="workout-card" id="workout-4">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+      <h3 class="editable-content" data-translate="day5" contenteditable="true">Day 5 - Push (Higher Volume)</h3>
+      <button class="delete-card-btn" onclick="deleteWorkoutCard(this)" style="background: #ef4444; color: white; border: none; padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer;">Delete Card</button>
+    </div>
+    <table class="workout-table">
+      <thead>
+        <tr>
+          <th class="editable-content" contenteditable="true">Exercise</th>
+          <th class="editable-content" contenteditable="true">Sets</th>
+          <th class="editable-content" contenteditable="true">Reps</th>
+          <th class="editable-content" contenteditable="true">Rest</th>
+          <th class="editable-content" contenteditable="true">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Incline Barbell Bench" data-original="Incline Barbell Bench" value="Incline Barbell Bench">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="4"></td>
+          <td><input type="text" class="editable" value="8-10"></td>
+          <td><input type="text" class="editable" value="2 min"></td>
+          <td><input type="text" class="editable" value="Upper chest focus"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Flat Dumbbell Press" data-original="Flat Dumbbell Press" value="Flat Dumbbell Press">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="10-12"></td>
+          <td><input type="text" class="editable" value="90 sec"></td>
+          <td><input type="text" class="editable" value="Control tempo"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Arnold Press" data-original="Arnold Press" value="Arnold Press">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="8-10"></td>
+          <td><input type="text" class="editable" value="90 sec"></td>
+          <td><input type="text" class="editable" value="Full rotation"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Cable Lateral Raises" data-original="Cable Lateral Raises" value="Cable Lateral Raises">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="12-15"></td>
+          <td><input type="text" class="editable" value="60 sec"></td>
+          <td><input type="text" class="editable" value="Constant tension"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Skull Crushers" data-original="Skull Crushers" value="Skull Crushers">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="10-12"></td>
+          <td><input type="text" class="editable" value="90 sec"></td>
+          <td><input type="text" class="editable" value="Keep elbows still"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Dips" data-original="Dips" value="Dips">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="10-12"></td>
+          <td><input type="text" class="editable" value="90 sec"></td>
+          <td><input type="text" class="editable" value="Add weight if possible"></td>
+        </tr>
+      </tbody>
+      <tr class="add-exercise-row">
+        <td colspan="5" style="text-align: center; padding: 1rem;">
+          <button onclick="window.addExerciseRow(this)" style="background: var(--primary); 
+                         color: var(--background); 
+                         padding: 0.5rem 1rem; 
+                         border-radius: 0.5rem; 
+                         border: none; 
+                         cursor: pointer; 
+                         font-weight: bold;">
+            + Add Exercise
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="workout-card" id="workout-5">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+      <h3 class="editable-content" data-translate="day6" contenteditable="true">Day 6 - Pull (Trap/Arm Focus)</h3>
+      <button class="delete-card-btn" onclick="deleteWorkoutCard(this)" style="background: #ef4444; color: white; border: none; padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer;">Delete Card</button>
+    </div>
+    <table class="workout-table">
+      <thead>
+        <tr>
+          <th class="editable-content" contenteditable="true">Exercise</th>
+          <th class="editable-content" contenteditable="true">Sets</th>
+          <th class="editable-content" contenteditable="true">Reps</th>
+          <th class="editable-content" contenteditable="true">Rest</th>
+          <th class="editable-content" contenteditable="true">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Rack Pulls" data-original="Rack Pulls" value="Rack Pulls">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="4"></td>
+          <td><input type="text" class="editable" value="6-8"></td>
+          <td><input type="text" class="editable" value="2-3 min"></td>
+          <td><input type="text" class="editable" value="Focus on upper back"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Wide-Grip Pulldown" data-original="Wide-Grip Pulldown" value="Wide-Grip Pulldown">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="8-10"></td>
+          <td><input type="text" class="editable" value="90 sec"></td>
+          <td><input type="text" class="editable" value="Full stretch at top"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Single-Arm DB Row" data-original="Single-Arm DB Row" value="Single-Arm DB Row">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="10-12"></td>
+          <td><input type="text" class="editable" value="90 sec"></td>
+          <td><input type="text" class="editable" value="Feel the stretch"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Cable Rear Delt Fly" data-original="Cable Rear Delt Fly" value="Cable Rear Delt Fly">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="12-15"></td>
+          <td><input type="text" class="editable" value="60 sec"></td>
+          <td><input type="text" class="editable" value="Light weight, strict form"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Preacher Curls" data-original="Preacher Curls" value="Preacher Curls">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="10-12"></td>
+          <td><input type="text" class="editable" value="90 sec"></td>
+          <td><input type="text" class="editable" value="Full extension"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Incline DB Curls" data-original="Incline DB Curls" value="Incline DB Curls">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="12-15"></td>
+          <td><input type="text" class="editable" value="90 sec"></td>
+          <td><input type="text" class="editable" value="Peak contraction"></td>
+        </tr>
+      </tbody>
+      <tr class="add-exercise-row">
+        <td colspan="5" style="text-align: center; padding: 1rem;">
+          <button onclick="window.addExerciseRow(this)" style="background: var(--primary); 
+                         color: var(--background); 
+                         padding: 0.5rem 1rem; 
+                         border-radius: 0.5rem; 
+                         border: none; 
+                         cursor: pointer; 
+                         font-weight: bold;">
+            + Add Exercise
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="workout-card" id="workout-6">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+      <h3 class="editable-content" data-translate="day7" contenteditable="true">Day 7 - Legs (Higher Volume)</h3>
+      <button class="delete-card-btn" onclick="deleteWorkoutCard(this)" style="background: #ef4444; color: white; border: none; padding: 0.5rem 1rem; border-radius: 0.5rem; cursor: pointer;">Delete Card</button>
+    </div>
+    <table class="workout-table">
+      <thead>
+        <tr>
+          <th class="editable-content" contenteditable="true">Exercise</th>
+          <th class="editable-content" contenteditable="true">Sets</th>
+          <th class="editable-content" contenteditable="true">Reps</th>
+          <th class="editable-content" contenteditable="true">Rest</th>
+          <th class="editable-content" contenteditable="true">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Front Squat" data-original="Front Squat" value="Front Squat">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="4"></td>
+          <td><input type="text" class="editable" value="8-10"></td>
+          <td><input type="text" class="editable" value="2 min"></td>
+          <td><input type="text" class="editable" value="Keep torso upright"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Bulgarian Split Squat" data-original="Bulgarian Split Squat" value="Bulgarian Split Squat">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="10/leg"></td>
+          <td><input type="text" class="editable" value="90 sec"></td>
+          <td><input type="text" class="editable" value="Control balance"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Deadlift" data-original="Deadlift" value="Deadlift">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="4"></td>
+          <td><input type="text" class="editable" value="6-8"></td>
+          <td><input type="text" class="editable" value="2-3 min"></td>
+          <td><input type="text" class="editable" value="If recovered"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Hip Thrust" data-original="Hip Thrust" value="Hip Thrust">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="10-12"></td>
+          <td><input type="text" class="editable" value="90 sec"></td>
+          <td><input type="text" class="editable" value="Full glute squeeze"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Leg Extensions" data-original="Leg Extensions" value="Leg Extensions">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="3"></td>
+          <td><input type="text" class="editable" value="12-15"></td>
+          <td><input type="text" class="editable" value="60 sec"></td>
+          <td><input type="text" class="editable" value="Hold peak contraction"></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="editable" data-translate="Standing Calf Raises" data-original="Standing Calf Raises" value="Standing Calf Raises">
+            <span class="exercise-link" onclick="showVideoModal(this.previousElementSibling)">&#x1f4f9;</span>
+          </td>
+          <td><input type="text" class="editable" value="4"></td>
+          <td><input type="text" class="editable" value="15-20"></td>
+          <td><input type="text" class="editable" value="60 sec"></td>
+          <td><input type="text" class="editable" value="Full range of motion"></td>
+        </tr>
+      </tbody>
+      <tr class="add-exercise-row">
+        <td colspan="5" style="text-align: center; padding: 1rem;">
+          <button onclick="window.addExerciseRow(this)" style="background: var(--primary); 
+                         color: var(--background); 
+                         padding: 0.5rem 1rem; 
+                         border-radius: 0.5rem; 
+                         border: none; 
+                         cursor: pointer; 
+                         font-weight: bold;">
+            + Add Exercise
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="fixed-buttons-container">
+  <button onclick="createWorkoutCard()">+ Add Workout</button>
+  <button onclick="createRestDayCard()">+ Add Rest Day</button>
+</div>
+
+<div class="action-buttons">
+  <button class="action-button reset" onclick="resetWebsite()">Reset to Original</button>
+  <button class="action-button save" onclick="saveWebsite()">Save &amp; Download</button>
+</div>
+
+<script type="module" src="script.js"></script>
+
+<footer class="footer">
+  <p class="editable-content" contenteditable="true">&quot;Science meets sweat &#x2013; achieve your goals!&quot;</p>
+  <p class="editable-content" contenteditable="true">&#xa9; 2024 Amin Shan Science-Based Workout Plan</p>
+</footer>
+
+</body></html>
